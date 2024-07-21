@@ -1,0 +1,18 @@
+descarhar el dotnet-install.sh
+
+/dotnet-install.sh --install-dir /usr/share/dotnet -channel Current -version "version"
+
+Comandos Necesarios
+sudo nano /etc/profile.d/dotnet.sh
+
+Copiar
+
+export DOTNET_ROOT=/usr/share/dotnet
+export MSBuildSDKsPath=$DOTNET_ROOT/sdk/$(${DOTNET_ROOT}/dotnet --version)/Sdks
+export PATH=${PATH}:${DOTNET_ROOT}
+
+Copiar
+
+# Adds dotnet tools to the PATH variable
+export PATH="$PATH:/home/[[USER_NAME]]/.dotnet/tools"
+

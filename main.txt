@@ -1,0 +1,37 @@
+#!/bin/bash
+#sudo pacman -S update -y
+
+#sudo pacman -S upgrade -y
+
+sudo pacman -S rofi -y
+
+sudo pacman -S git -y
+
+sudo pacman -S zsh -y
+
+sudo pacman -S alacritty -y
+
+sudo pacman -S flameshot
+
+flameshot gui
+
+install delta
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+sudo ln -sf /mnt/PERSONAL/Documentos/scripts/.bash_aliases /home/majerhua
+
+sudo ln -sf /mnt/PERSONAL/Documentos/scripts/.zsh_history /home/majerhua
+
+sudo ln -sf /mnt/PERSONAL/Documentos/scripts/.zshrc /home/majerhua
+
+sudo ln -sf /mnt/PERSONAL/Documentos/scripts/alacritty.yml /home/majerhua/.config/alacritty
+
+sudo ln -sf /mnt/PERSONAL/Documentos/scripts/config.rasi /home/majerhua/.config/rofi
+
+
+sudo ln -sf /mnt/PERSONAL/Documentos/Claves/ssh/* /home/majerhua/.ssh

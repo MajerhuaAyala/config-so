@@ -1,0 +1,67 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# Weather
+[weather]
+command=curl -Ss 'https://wttr.in/Ayacucho+Per%C3%BA?0&Q&T&lang=es' | cut -c 16- | head -2 | xargs echo
+interval=3600
+color=#A4C2F4
+
+# Date Time
+[time]
+label=
+command=date '+%d/%m %H:%M'
+interval=1
+
+#[microphone]
+#label=🎧
+#interval=5
+#command=~/.config/i3/scripts/microphone.sh
+
+
+
+[memory]
+command=~/.config/i3/scripts/memory
+label=
+interval=1
+color=#A4C2F4
+separator=true
+
+# Battery indicator
+[battery-plus]
+command=~/.config/i3/scripts/battery-plus
+markup=pango
+instance=BAT0
+interval=30
+
+
+
+
+
